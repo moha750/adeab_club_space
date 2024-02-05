@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>نادي أدِيب</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="parent">
+                <div class="top-div">
+                   <img src="logo.png" alt="">
+                </div>
+                <!-- <ul class="progress-bar">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+
+                </ul> -->
+            </div> 
+
+            <form method="post" action="https://script.google.com/macros/s/AKfycbyXzY9WB0j5NZZ2c2emqi6iKaAAHeXXNQjX746mLMYEaNGhYYtRO9v164ElJ2ctB7Er/exec" name="MyGroup">
+
+            <div class="main active">
+                <div class="content">
+                   <h4 class="title">     💳استمارة تجديد العضوية   </h4>
+
+                   <div class="input-text">
+                    <input id="input" type="text" placeholder="أسمك يـ مُبدع/ـه "  name="الأسم الثلاثي" require>
+                    <span> ✍🏻الأسم الثلاثي </span>
+                </div>
+
+                </div>
+                <div class="button">
+                    <button type="submit" value="Submit" class="create-workspace"> تشرفنا فيك، نكمل؟ </button>
+                </div>
+
+                
+            </div> 
+
+
+        <div class="main">
+                <div class="content">
+                   <h4 class="title">     هل تريد الاستمرار🤔؟    </h4>
+                </div>  
+
+                
+                <div class="grid-wrapper grid-col-auto">
+                  <label for="radio-card-1" class="radio-card">
+                    <input type="radio" name="هل تريد الاستمرار؟" value="لا" id="radio-card-1" required/>
+                    <div class="card-content-wrapper">
+                      <span class="check-icon"></span>
+                      <div class="card-content">
+                        <img
+                          src="./no.png"
+                        />
+                        <h4>لا أُريد الاستمرار</h4>
+                      </div>
+                    </div>
+                  </label>
+                  <!-- /.radio-card -->
+        
+                  <label for="radio-card-2" class="radio-card">
+                    <input type="radio" name="هل تريد الاستمرار؟" value="نعم" id="radio-card-2" required/>
+                    <div class="card-content-wrapper">
+                      <span class="check-icon"></span>
+                      <div class="card-content">
+                        <img
+                        src="./yes.png"
+                        alt=""
+                        />
+                        <h4>نعم أُريد الاستمرار</h4>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="button button_gap">
+                    <button class="back-click">الرجوع للخلف</button>
+                    <button class="next-click">باقي خطوة أخيرة</button>
+                </div>
+      </div>
+
+
+      <div class="main">
+
+        <div class="content">
+           <h4 class="title"> 🎙️المايك لك </h4>
+        </div>
+      
+        <div class="input-text">
+          <textarea placeholder="  عندك سؤال، استفسار، اقتراح أو حتى كلمة حاب تقولها ... هذه المساحة لك"  name="هذه المساحة لك" require id="" cols="10" rows="10"></textarea>
+      </div>
+
+
+        <div class="button button_gap1">
+            <button class="back-click">الرجوع للخلف</button>
+            <button class="finish-click" name="submit">شكرًا لك </button>
+        </div>
+
+       </div> 
+
+    </form>
+
+            <div class="main">
+
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+                <div class="content">
+                   <h2 style="color: #ffc60a;">  💛شكرًا لك يا سفير أديب  </h2>
+                   <!-- <p> 
+                    سعيدين بتسجيلك معنا، وانتظر مرحلة القبول المبدئي
+                  </p> -->
+                </div>
+
+                <div class="finish">
+                  <a href="https://telegram.me/@1001825412173" target="_blank"><button class="twitter">  الرجوع إلى عائلة أدِيب </button></a>
+              </div>
+
+            </div>
+
+
+        </div>
+      </div>
+    </div>
+
+      <script src="script.js"></script>
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyXzY9WB0j5NZZ2c2emqi6iKaAAHeXXNQjX746mLMYEaNGhYYtRO9v164ElJ2ctB7Er/exec'
+        const form = document.forms['MyGroup']
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          // .then(response => alert("Thank you! your form is submitted successfully." ))
+          // .then(() => {  window.location.reload(); })
+          // .catch(error => console.error('Error!', error.message))
+        })
+        </script>
+
+        <script>
+          function isChecked() {
+            if(document.getElementById("mobile").checked){
+              document.getElementById("result").style.display = 'block'
+            }
+            else{
+              document.getElementById("result").style.display = 'none'
+            }
+          }
+        </script>
+
+</html>
